@@ -188,7 +188,7 @@ for e, epoch in enumerate(range(n_epoch)):
 
 
         # log
-            print(
+    	print(
             f'\rEpoch [{epoch + 1}/{n_epoch}] {i + 1}/{len(img)} Loss_D: {loss_D.item():.4f} Loss_G: {loss_G.item():.4f}',
             end='')
     G.eval()
