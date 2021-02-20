@@ -175,16 +175,16 @@ for e, epoch in enumerate(range(n_epoch)):
         """ train G """
         # leaf
        	z = torch.randn(bs, z_dim).to(device)
-		f_imgs = G(z)
+	f_imgs = G(z)
 
-		# dis
-		f_logit = D(f_imgs)
+	# dis
+	f_logit = D(f_imgs)
 
-		loss_G = criterion(f_logit, r_label)
-		# update model
-		G.zero_grad()
-		loss_G.backward()
-		opt_G.step()
+	loss_G = criterion(f_logit, r_label)
+	# update model
+	G.zero_grad()
+	loss_G.backward()
+	opt_G.step()
 
 
         # log
